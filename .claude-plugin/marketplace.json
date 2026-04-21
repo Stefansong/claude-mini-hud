@@ -1,0 +1,19 @@
+{
+  "name": "claude-mini-hud",
+  "owner": {
+    "name": "Stefansong"
+  },
+  "metadata": {
+    "description": "Minimal two-line Claude Code statusline with context / 5h / 7d usage bars.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "claude-mini-hud",
+      "source": "./",
+      "description": "Two-line statusline: model / dir / git on top, context + 5h + 7d usage bars below. Pure bash + jq, zero runtime dependencies.",
+      "category": "monitoring",
+      "tags": ["hud", "statusline", "usage", "rate-limit", "minimal"]
+    }
+  ]
+}

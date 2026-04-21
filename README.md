@@ -24,20 +24,34 @@ The native Claude Code statusline doesn't surface rate-limit usage. The existing
 
 ## Install
 
-1. Put `hud.sh` somewhere on your machine, e.g. `~/.claude/hud.sh`:
+### Option A: Claude Code plugin (recommended)
+
+Inside Claude Code:
+
+```
+/plugin marketplace add Stefansong/claude-mini-hud
+/plugin install claude-mini-hud
+/claude-mini-hud:setup
+```
+
+Then restart Claude Code.
+
+### Option B: Manual
+
+1. Download `hud.sh`:
 
    ```bash
    curl -fsSL https://raw.githubusercontent.com/Stefansong/claude-mini-hud/main/hud.sh -o ~/.claude/hud.sh
    chmod +x ~/.claude/hud.sh
    ```
 
-2. Add this to `~/.claude/settings.json`:
+2. Add to `~/.claude/settings.json`:
 
    ```json
    {
      "statusLine": {
        "type": "command",
-       "command": "bash /Users/YOU/.claude/hud.sh"
+       "command": "bash ~/.claude/hud.sh"
      }
    }
    ```

@@ -1,0 +1,16 @@
+{
+  "name": "claude-mini-hud",
+  "description": "Minimal two-line Claude Code statusline with context / 5h / 7d usage bars.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Stefansong",
+    "url": "https://github.com/Stefansong"
+  },
+  "commands": [
+    "./commands/setup.md"
+  ],
+  "homepage": "https://github.com/Stefansong/claude-mini-hud",
+  "repository": "https://github.com/Stefansong/claude-mini-hud",
+  "license": "MIT",
+  "keywords": ["hud", "statusline", "usage", "rate-limit", "minimal", "claude-code"]
+}
