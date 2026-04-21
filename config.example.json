@@ -1,0 +1,24 @@
+{
+  "thresholds": {
+    "warn": 50,
+    "alert": 75,
+    "critical": 90
+  },
+  "colors": {
+    "low": "cyan",
+    "warn": "yellow",
+    "alert": "magenta",
+    "critical": "red",
+    "model": "cyan",
+    "project": "yellow",
+    "branch": "cyan",
+    "dim": "dim"
+  },
+  "barWidth": 10,
+  "bar": {
+    "filled": "█",
+    "empty": "░"
+  },
+  "separator": "│",
+  "showGit": true
+}

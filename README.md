@@ -58,6 +58,47 @@ Then restart Claude Code.
 
 3. Restart Claude Code.
 
+## Customize
+
+Drop a JSON file at `~/.claude/claude-mini-hud.json` (or point `CLAUDE_MINI_HUD_CONFIG` at any path). All keys are optional — missing keys fall back to defaults shown here:
+
+```json
+{
+  "thresholds": { "warn": 50, "alert": 75, "critical": 90 },
+  "colors": {
+    "low": "cyan",
+    "warn": "yellow",
+    "alert": "magenta",
+    "critical": "red",
+    "model": "cyan",
+    "project": "yellow",
+    "branch": "cyan",
+    "dim": "dim"
+  },
+  "barWidth": 10,
+  "bar": { "filled": "█", "empty": "░" },
+  "separator": "│",
+  "showGit": true
+}
+```
+
+### Color values
+
+Any field under `colors.*` accepts:
+
+| Form | Example | Notes |
+|------|---------|-------|
+| Name | `"cyan"` | `black red green yellow blue magenta cyan white gray dim bold` |
+| ANSI code | `"36"` or `"1;33"` | Raw SGR parameters |
+| 256-color | `"256:208"` | Orange; any index 0–255 |
+| 24-bit hex | `"#FF6600"` | Full RGB — needs a true-color terminal |
+
+### Thresholds
+
+`warn`, `alert`, `critical` are integer percentages. A bar uses `colors.critical` when usage ≥ `critical`, else `alert` when ≥ `alert`, else `warn` when ≥ `warn`, else `low`.
+
+A sample config is in [`config.example.json`](config.example.json).
+
 ## Data source
 
 All values come from the JSON that Claude Code pipes to `stdin` of your statusline script — no extra API calls:
